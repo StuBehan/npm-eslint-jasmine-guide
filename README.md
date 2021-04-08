@@ -53,3 +53,4 @@ Now everything might look quite angry at this point, there are a few things we n
 ```
 - Stay in the `.eslintrc.json` and add `"jasmine": true` to the `"env":` block (your editor might help autofill with these)
 - There are other options check them out if you want on the [eslint/jasmine plugin page](https://www.npmjs.com/package/eslint-plugin-jasmine) on npm
+- Depending on your editor you may get wiggly red lines to show errors or you may need to run `npx eslint ./src` to test your files.
