@@ -1,0 +1,19 @@
+{
+  "name": "npm-eslint-jasmine-guide",
+  "version": "1.0.0",
+  "description": "A guide to setting up ESLint and jasmine as your linter and test suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StuBehan/npm-eslint-jasmine-guide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StuBehan/npm-eslint-jasmine-guide/issues"
+  },
+  "homepage": "https://github.com/StuBehan/npm-eslint-jasmine-guide#readme"
+}
