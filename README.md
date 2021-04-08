@@ -8,7 +8,7 @@ To write test driven Javascript we need a testing suite and preferably some kind
 
 - Assuming you've already got [node.js](http://nodejs.org/) installed
 - Run `npm init`
-- If you screw it up (but also how??) you can delete the package.json at this point or just edit it manually 
+- If you screw it up you can delete the package.json at this point and run `npm init` again or just edit it manually, its worth a look inside anyway
 
 ## Then install jasmine of your choice, there are a few ways to do it.
 
@@ -54,3 +54,5 @@ Now everything might look quite angry at this point, there are a few things we n
 - Stay in the `.eslintrc.json` and add `"jasmine": true` to the `"env":` block (your editor might help autofill with these)
 - There are other options check them out if you want on the [eslint/jasmine plugin page](https://www.npmjs.com/package/eslint-plugin-jasmine) on npm
 - Depending on your editor you may get wiggly red lines to show errors or you may need to run `npx eslint ./src` to test your files.
+
+And there you go a testing suite and a linter for JS.
