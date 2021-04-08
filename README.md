@@ -4,13 +4,13 @@
 
 To write test driven Javascript we need a testing suite and preferably some kind on linter to keep us on track. 
 
-## Firstly we need to create package.json
+## Firstly we need to create package.json:
 
 - Assuming you've already got [node.js](http://nodejs.org/) installed
 - Run `npm init`
 - If you screw it up you can delete the package.json at this point and run `npm init` again or just edit it manually, its worth a look inside anyway
 
-## Then install jasmine of your choice, there are a few ways to do it.
+## Then install jasmine of your choice, there are a few ways to do it:
 
 ### Install via npm
 - You can use `npm install --save-dev jasmine`
@@ -21,7 +21,7 @@ To write test driven Javascript we need a testing suite and preferably some kind
 
 ### Jasmine via CDN script tags in your SpecRunner.html
 
-Use a CDN `SpecRunner.html` there is an example in [this repo](https://github.com/StuBehan/npm-eslint-jasmine-guide/blob/main/CdnSpecRunner.html), this is probably the easiest way to add jasmine.
+Use a CDN `SpecRunner.html` there is an example in [this repo](https://github.com/StuBehan/npm-eslint-jasmine-guide/blob/main/SpecRunner.html), this is probably the easiest way to add jasmine.
 - You'll need to `mkdir spec` and `mkdir src` and populate it with your files manually.
 
 ### Stand alone Jasmine download and unzip
