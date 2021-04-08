@@ -27,3 +27,29 @@ Use a CDN `SpecRunner.html` there is an example in [this repo](https://github.co
 ### Stand alone Jasmine download and unzip
 
 - Available on [github: jasmine/jasmine](https://github.com/jasmine/jasmine/releases) download the release of your choice and drop in to your repo.
+
+## Install ESLint
+
+- `npm install eslint --save-dev` to install 
+- `npx eslint --init` to initialize eslint and follow the instructions
+- I went with: 
+  - `To check syntax and find problems`
+  - `import/export` (because I have babel installed in VScode, if you don't know just use require/exports)
+  - `none of these` for framework
+  - `no` for typescript
+  - `browser`
+  - `JSON` for the config file
+
+Now everything might look quite angry at this point, there are a few things we need to specify.
+
+- Firstly `npm install --save-dev eslint-plugin-jasmine`
+- Then in your `.eslintrc.json` at the bottom of the tree add:
+```
+},                  // this is the previous blocks curly brace, add a comma
+    "plugins": [
+      "jasmine"
+    ]
+}
+```
+- Stay in the `.eslintrc.json` and add `"jasmine": true` to the `"env":` block (your editor might help autofill with these)
+- There are other options check them out if you want on the [eslint/jasmine plugin page](https://www.npmjs.com/package/eslint-plugin-jasmine) on npm
