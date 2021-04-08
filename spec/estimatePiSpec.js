@@ -20,7 +20,7 @@ describe('EstimatePi', function(){
       expect(estimatePi.randomNumber(0, 1)).toBeLessThan(1)
     })
 
-    it('insideOutside uses rand to plot points and determine their distance form origin', function(){
+    it('insideOutside returns an estimate of pi', function(){
       expect(estimatePi.insideOutside(1000000)).toBeCloseTo(3.14)
     })
   })
