@@ -28,7 +28,7 @@ Use a CDN `SpecRunner.html` there is an example in [this repo](https://github.co
 
 - Available on [github: jasmine/jasmine](https://github.com/jasmine/jasmine/releases) download the release of your choice and drop in to your repo.
 
-## Install ESLint
+## Install ESLint:
 
 - `npm install eslint --save-dev` to install 
 - `npx eslint --init` to initialize eslint and follow the instructions
