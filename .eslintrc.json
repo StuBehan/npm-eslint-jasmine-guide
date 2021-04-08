@@ -10,6 +10,7 @@
         "sourceType": "module"
     },
     "rules": {
+      "semi-style": ["error", "last"]
     }, 
     "plugins": [
       "jasmine"
