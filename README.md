@@ -17,10 +17,11 @@ To write test driven Javascript we need a testing suite and preferably some kind
 - Then `npx jasmine init`
 - Add jasmine to your test script in your package.json `"scripts": { "test": "jasmine" }`
 - Then you can run your test script with `npm test`
+- We won't want to push our dependancies to github, so `touch .gitignore` and add `node_modules`
 
 ### Jasmine via CDN script tags in your SpecRunner.html
 
-Use a CDN `CdnSpecRunner.html` there is an example in [this repo](https://github.com/StuBehan/npm-eslint-jasmine-guide/blob/main/SpecRunner.html), this is probably the easiest way to add jasmine.
+Use a CDN `SpecRunner.html` there is an example in [this repo](https://github.com/StuBehan/npm-eslint-jasmine-guide/blob/main/CdnSpecRunner.html), this is probably the easiest way to add jasmine.
 - You'll need to `mkdir spec` and `mkdir src` and populate it with your files manually.
 
 ### Stand alone Jasmine download and unzip

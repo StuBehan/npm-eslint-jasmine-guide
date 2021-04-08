@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/StuBehan/npm-eslint-jasmine-guide/issues"
   },
-  "homepage": "https://github.com/StuBehan/npm-eslint-jasmine-guide#readme"
+  "homepage": "https://github.com/StuBehan/npm-eslint-jasmine-guide#readme",
+  "devDependencies": {
+    "jasmine": "^3.7.0"
+  }
 }
