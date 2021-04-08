@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/StuBehan/npm-eslint-jasmine-guide.git"
   },
-  "author": "",
+  "author": "Stu Behan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StuBehan/npm-eslint-jasmine-guide/issues"
