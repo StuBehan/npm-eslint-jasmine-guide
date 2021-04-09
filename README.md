@@ -1,4 +1,4 @@
- # A guide for setting up a JS repo to use ESLint along side your jasmine test suite[![Build Status](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide.svg?branch=main)](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide)
+ # A guide for setting up a JS repo to use ESLint along side your jasmine test suite [![Build Status](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide.svg?branch=main)](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide)
 
 [ESLint](https://eslint.org/) is a linter for Javascript and requires [node.js](http://nodejs.org/) and runs on Windows, Linux and Mac.  
 
