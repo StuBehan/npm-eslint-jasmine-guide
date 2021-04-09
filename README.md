@@ -13,7 +13,7 @@ To write test driven Javascript we need a testing suite and preferably some kind
 ## Then install jasmine of your choice, there are a few ways to do it:
 
 ### Install via npm
-- You can use `npm install --save-dev jasmine`
+- You can use `npm install --save-dev jasmine` (--save-dev tag adds it to your develepment dependancies)
 - Then `npx jasmine init`
 - Add jasmine to your test script in your package.json `"scripts": { "test": "jasmine" }`
 - Then you can run your test script with `npm test`
@@ -56,3 +56,10 @@ Now everything might look quite angry at this point, there are a few things we n
 - Depending on your editor you may get wiggly red lines to show errors or you may need to run `npx eslint ./src` to test your files.
 
 And there you go a testing suite and a linter for JS.
+
+## Extra: Travis CI integration
+
+- Make a traivs.yml `echo language: node_js >> .travis.yml`
+- We're going to use a testing framework called Karma to carry out our Jasmine tests remotely on travis `npm install karma --save-dev`
+- Install the Karma-jasmine plugin `npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev`
+- Install the cli commands (Windows) `npm install -g karma-cli` (the -g tag means globally)

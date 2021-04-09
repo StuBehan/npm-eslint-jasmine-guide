@@ -3,8 +3,7 @@ describe('EstimatePi', function(){
   var estimatePi;
 
   beforeEach(function(){
-    // eslint-disable-next-line no-undef
-    estimatePi = new EstimatePi();
+    estimatePi = new EstimatePi;
   })
 
   it('has a default numberPointsCircle which is zero', function(){
