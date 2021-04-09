@@ -3,6 +3,7 @@ describe('EstimatePi', function(){
   var estimatePi;
 
   beforeEach(function(){
+    // eslint-disable-next-line no-undef
     estimatePi = new EstimatePi;
   })
 
