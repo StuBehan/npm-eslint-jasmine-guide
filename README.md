@@ -57,7 +57,7 @@ Now everything might look quite angry at this point, there are a few things we n
 
 And there you go a testing suite and a linter for JS.
 
-## Extra: Travis CI integration
+## Extra: Travis CI integration (Using Karma framework to support Jasmine)
 
 - Make a traivs.yml `echo language: node_js >> .travis.yml`
 - We're going to use a testing framework called Karma to carry out our Jasmine tests remotely on travis `npm install karma --save-dev`
