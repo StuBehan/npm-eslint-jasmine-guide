@@ -1,4 +1,4 @@
- # A guide for setting up a JS repo to use ESLint along side your jasmine test suite
+ # A guide for setting up a JS repo to use ESLint along side your jasmine test suite[![Build Status](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide.svg?branch=main)](https://travis-ci.com/StuBehan/npm-eslint-jasmine-guide)
 
 [ESLint](https://eslint.org/) is a linter for Javascript and requires [node.js](http://nodejs.org/) and runs on Windows, Linux and Mac.  
 
@@ -62,4 +62,28 @@ And there you go a testing suite and a linter for JS.
 - Make a traivs.yml `echo language: node_js >> .travis.yml`
 - We're going to use a testing framework called Karma to carry out our Jasmine tests remotely on travis `npm install karma --save-dev`
 - Install the Karma-jasmine plugin `npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev`
-- Install the cli commands (Windows) `npm install -g karma-cli` (the -g tag means globally)
+- Install the cli commands `npm install -g karma-cli` (the -g tag means globally)
+- Run Karma for the first time with `karma init` and follow the instructions, this will make a `karma.conf.js` in your root.
+  - `Jasmine`
+  - `no`
+  - `chrome` (add firefox too if you like or -bleh- opera)
+  - `src/*.js` and `spec/*Spec.js`
+  - just press return
+  - `yes` (not seen this work though)
+- Change the `"test"` script in `./package.json` to `"karma start karma.conf.js --single-run"`
+- Now you can run your tests in the CLI using `npm test` (test this because if it doesnt work neither will travis)
+- But before travis will work we need to tell it what we are going to need on our virtual machine:
+```
+language: node_js 
+node_js:
+  - 14
+
+dist: xenial
+services:
+  - xvfb
+
+addons:
+  chrome: stable
+```
+
+- Commit and push (hopefully you've commited a few times during all this) and add your sticker to  your README.md for unlimited kudos! you know, if your repo is passing...
