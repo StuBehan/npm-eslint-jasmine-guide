@@ -83,7 +83,8 @@ services:
   - xvfb  # this adds display support to allow browser action
 
 addons:
-  chrome: stable   # adds chrome obvs, if you added other browsers add them here, check travis docs to make sure you use the correct syntax
+  chrome: stable   # adds chrome obvs, if you added other browsers add them here, 
+                   # check travis docs to make sure you use the correct syntax
 ```
 
 - Commit and push (hopefully you've commited a few times during all this) and add your sticker to  your README.md for unlimited kudos! you know, if your repo is passing...
