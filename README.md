@@ -57,6 +57,38 @@ Now everything might look quite angry at this point, there are a few things we n
 
 And there you go a testing suite and a linter for JS.
 
+## Extra: Add compatiblity with jQuery to ESLint
+
+- Add jquery so its in your `package.json` with `npm install jquery`
+- Add jquery plugin: `npm install eslint-plugin-jquery --save-dev` 
+- Then in the `.eslintrc.json`:
+  
+```
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jasmine": true,
+        "jquery": true  <<<<<< do this
+    },
+    "extends": [
+        "standard",
+        "plugin:jquery/deprecated"  <<<<<< do this
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+      "semi": [2, "always"]
+    }, 
+    "plugins": [
+        "jasmine",
+        "jquery"  <<<<<< do this 
+    ]
+}
+```
+
 ## Extra: Travis CI integration (Using Karma framework to support Jasmine)
 
 - Make a traivs.yml `echo language: node_js >> .travis.yml`
@@ -68,7 +100,7 @@ And there you go a testing suite and a linter for JS.
   - `no`
   - `chrome` (add firefox too if you like or -bleh- opera)
   - `src/*.js` and `spec/*Spec.js`
-  - just press return
+  - Just press return
   - `yes` (not seen this work though)
 - Change the `"test"` script in `./package.json` to `"karma start karma.conf.js --single-run"`
 - Now you can run your tests in the CLI using `npm test` (test this because if it doesnt work neither will travis)
@@ -87,3 +119,28 @@ addons:
 ```
 
 - Commit and push (hopefully you've commited a few times during all this) and add your sticker to  your README.md for unlimited kudos! you know, if your repo is passing...
+
+## Extra: Add coverage to Karma with Istanbul
+
+- You'll need to have added Karma to your repo as in the above steps
+- Run `npm install karma karma-coverage --save-dev`
+- In the `reporters:` section of your `karma.conf.js` add `'coverage'` to the array
+  
+```
+ // coverage reporter generates the coverage
+    reporters: ['progress', 'coverage'],
+```
+
+- In the `preprocessors:` section add `'src/**/*.js': ['coverage']`
+
+```
+ preprocessors: {
+      // source files, that you wanna generate coverage for
+      // do not include tests or libraries
+      // (these files will be instrumented by Istanbul)
+      'src/**/*.js': ['coverage']
+    },
+```
+
+- In your `.gitignore` add the line `coverage/` as you won't want to push your coverage reports to git
+- Now run `npm test` and you should see the coverage directory appear, inside will be a html file named `yourJavascript.js.html` open that in browser. (in VScode open with live server and it'll stay up to date)
